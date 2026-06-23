@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reminders | SmartExpense</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="brand">
+      <i class="fa-solid fa-wallet"></i>
+      <span>SmartExpense</span>
+    </div>
+
+    <nav class="menu">
+      <a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a>
+      <a href="add_expense.html"><i class="fa-solid fa-plus"></i> Add Expense</a>
+      <a href="auto_import.html"><i class="fa-solid fa-file-import"></i> Auto Import</a>
+      <a href="lending.html"><i class="fa-solid fa-users"></i> Lending</a>
+      <a href="reminders.html" class="active">
+        <i class="fa-solid fa-bell"></i>
+        Reminders
+      </a>
+      <a href="analytics.html"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+       <a href="khata.html">
+    <i class="fa-solid fa-book"></i>
+    Khata
+</a>
+      <a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a>
+    </nav>
+
+    <button id="logoutBtn" class="logout">
+      <i class="fa-solid fa-right-from-bracket"></i> Logout
+    </button>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="dashboard.html">SmartExpense</a>
+        <a href="dashboard.html" class="btn btn-outline-light btn-sm">Back</a>
+    </div>
+</nav>
+
+<main class="container my-5 fade-in">
+
+    <!-- HEADER -->
+    <div class="page-header mb-4">
+        <h2>Payment Reminders</h2>
+        <p>Never forget to ask back money you lent</p>
+    </div>
+
+    <div class="row">
+
+        <!-- ADD REMINDER -->
+        <div class="col-md-5 mb-4">
+            <div class="card p-4 card-highlight">
+                <h5 class="mb-3">
+                    <i class="fa-solid fa-bell me-2"></i>
+                    Create Reminder
+                </h5>
+
+                <form id="reminderForm">
+                    <input
+                        type="text"
+                        id="person"
+                        class="form-control mb-2"
+                        placeholder="Person name"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="amount"
+                        class="form-control mb-2"
+                        placeholder="Amount (₹)"
+                        required
+                    >
+
+                    <input
+                        type="date"
+                        id="date"
+                        class="form-control mb-3"
+                        required
+                    >
+
+                    <button class="btn btn-brand w-100">
+                        <i class="fa-solid fa-plus me-1"></i>
+                        Add Reminder
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- REMINDER LIST -->
+        <div class="col-md-7">
+            <div class="card p-4">
+                <h5 class="mb-3">
+                    <i class="fa-solid fa-list me-2"></i>
+                    Active Reminders
+                </h5>
+
+                <ul class="list-group" id="reminderList">
+                    <li class="list-group-item text-muted">
+                        No reminders yet
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+  </main>
+</div>
+
+<script src="js/reminders.js"></script>
+</body>
+</html>

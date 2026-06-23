@@ -1,0 +1,307 @@
+🧠 HOW TO ANSWER IF EXAMINER ASKS
+
+===“Why did you use ngrok?”
+
+Say 👇:
+
+“To demonstrate cross-device accessibility without deploying to a production server. It securely tunnels the local Flask backend over HTTPS for demo purposes only.”
+
+🔥 That answer is GOLD.
+
+===If examiner asks:
+
+“Can this run on multiple devices?”
+
+Say this 👇 (exact lines):
+
+“Yes sir, the backend can run on one system and be accessed by multiple devices on the same network using the system’s IP address. Since it’s a Flask-based REST API, the frontend can connect from any device browser securely within the network.”
+
+===🧠 HOW TO SAY THIS CONFIDENTLY IN VIVA
+
+“The project follows modular architecture with clear separation of frontend, backend, database, and AI modules. The UI is designed using modern design principles like card-based layouts, responsive grids, and data visualization.”
+
+
+===============================================
+🔹 BACKEND FOLDER (backend/)
+
+This handles logic, AI, database, and security.
+
+📄 app.py – Main Brain
+
+Starts the Flask server
+
+Connects all routes (auth, expenses, lending, analytics)
+
+Handles CORS (for frontend access)
+
+Entry point of backend
+
+👉 “This is the central controller of the application.”
+
+📄 config.py – Configuration Manager
+
+Secret key
+
+Database path
+
+JWT settings
+
+Upload folder paths
+
+👉 Keeps sensitive & environment configs separate.
+
+📄 database.py – Database Connector
+
+Creates SQLite connection
+
+Initializes tables
+
+Handles commits & queries
+
+👉 Avoids repeated database code everywhere.
+
+📄 models.py – Database Schema
+
+Defines tables:
+
+Users
+
+Expenses
+
+Lending
+
+Reminders
+
+👉 Logical data structure for the entire app.
+
+📄 auth.py – 🔐 Authentication & Security
+
+Register API
+
+Login API
+
+Password hashing
+
+JWT token generation
+
+👉 Ensures user-only data access.
+
+📄 expenses.py – 💸 Expense Management
+
+Add expense
+
+Auto-categorize using ML
+
+Fetch user expenses
+
+👉 Core feature of the system.
+
+📄 lending.py – 👥 Friends & Family Lending
+
+Add lending entry
+
+Track pending / cleared
+
+Risk detection hooks
+
+👉 Makes this project different from normal expense apps.
+
+📄 reminders.py – 🔔 Ask-Back Reminder Logic
+
+Create reminders
+
+Auto-detect due dates
+
+Notification simulation
+
+👉 Shows real-life usefulness.
+
+📄 analytics.py – 📊 AI Insights
+
+Monthly prediction
+
+Risk scoring
+
+Expense summaries
+
+👉 This is where AI shines.
+
+📄 utils.py – 🛠 Helper Functions
+
+Date formatting
+
+Text cleaning
+
+ML model loading
+
+Common reusable logic
+
+👉 Keeps code clean and professional.
+
+🤖 ML FOLDER (backend/ml/)
+
+This proves AI/ML usage (very important for AIML student like you).
+
+📄 train_model.py
+
+Trains:
+
+Expense classifier (TF-IDF + Logistic Regression)
+
+Expense predictor (Linear Regression)
+
+Risk model
+
+Saves models as .pkl
+
+👉 Only run once.
+
+📄 expense_classifier.pkl
+
+Predicts category:
+
+Food
+
+Travel
+
+Shopping
+
+Bills
+
+📄 expense_predictor.pkl
+
+Predicts next month’s expense
+
+📄 risk_model.pkl
+
+Predicts:
+
+Low
+
+Medium
+
+High repayment risk
+
+📄 sample_data.csv
+
+Training dataset
+
+Used only for ML training
+
+📂 STATIC FOLDER (backend/static/)
+
+Used for auto-import simulation.
+
+📁 uploads/
+
+Stores uploaded screenshots (OCR mock)
+
+📁 temp/
+
+Temporary processing files
+
+👉 Safe & controlled storage.
+
+🗄️ database.db
+
+SQLite database
+
+Stores all user data locally
+
+👉 No internet dependency.
+
+🌐 FRONTEND FOLDER (frontend/)
+
+This is what makes your website beautiful 😍
+
+📄 HTML FILES (UI Pages)
+File	Purpose
+index.html	Modern landing page
+register.html	User registration
+login.html	Secure login
+dashboard.html	Cards + charts
+add_expense.html	Manual expense
+auto_import.html	SMS + OCR mock
+lending.html	Lending tracker
+reminders.html	Reminder list
+analytics.html	AI insights
+settings.html	Preferences
+
+👉 All pages are connected via navbar.
+
+🎨 CSS (frontend/css/style.css)
+
+This is where beauty comes from.
+
+What I’ll include:
+
+Soft blue → purple gradients
+
+Rounded cards
+
+Shadows
+
+Hover animations
+
+Smooth transitions
+
+Google Font (Poppins / Inter)
+
+👉 Modern fintech look 💳✨
+
+⚙️ JavaScript (frontend/js/)
+
+Controls logic + API calls.
+
+File	Work
+auth.js	Login & register
+dashboard.js	Summary cards
+expense.js	Add expenses
+import.js	SMS & OCR mock
+lending.js	Lending logic
+analytics.js	Charts
+reminders.js	Alerts
+
+👉 Clean separation = professional project.
+
+📄 requirements.txt
+
+Lists Python libraries:
+
+Flask
+
+scikit-learn
+
+pandas
+
+numpy
+
+bcrypt
+
+jwt
+
+📄 README.md
+
+Explains:
+
+Project overview
+
+Tech stack
+
+Features
+
+How to run
+
+👉 Needed for placement & GitHub.
+
+📄 run_instructions.txt
+
+Step-by-step:
+
+Install packages
+
+Run backend
+
+Open frontend
+
+Optional ngrok demo

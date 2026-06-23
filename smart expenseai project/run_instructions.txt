@@ -1,0 +1,25 @@
+####
+####
+####
+#.\.venv\Scripts\Activate.ps1
+
+'''
+cd "C:\Users\DELL\minor project"
+
+.\.venv\Scripts\Activate.ps1
+
+cd backend
+
+python app.py
+
+## new terinal for frontend 
+
+
+###cd "C:\Users\DELL\minor project\frontend"
+
+python -m http.server 5500
+'''
+
+cd backend
+
+python app.python
