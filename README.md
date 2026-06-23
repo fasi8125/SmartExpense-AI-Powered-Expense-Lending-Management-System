@@ -1,0 +1,2 @@
+# SmartExpense-AI-Powered-Expense-Lending-Management-System
+SmartExpense is a full-stack AI-powered personal finance management application built with Flask, SQLite, HTML, CSS, and JavaScript. It provides expense tracking, lending management, Khata ledger, AI-powered SMS expense categorization, reminders, analytics dashboards, and machine learning-based expense prediction in a modern responsive interface.
